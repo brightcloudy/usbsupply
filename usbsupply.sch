@@ -1,0 +1,302 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:bce
+LIBS:stm32
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 2
+Title "USB Power Supply"
+Date "2016-01-19"
+Rev "0.1"
+Comp "Bright Cloud Design"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L USB_OTG P?
+U 1 1 569E4FBD
+P 950 950
+F 0 "P?" H 1275 825 50  0000 C CNN
+F 1 "USB_OTG" H 950 1150 50  0000 C CNN
+F 2 "" V 900 850 50  0000 C CNN
+F 3 "" V 900 850 50  0000 C CNN
+	1    950  950 
+	0    -1   1    0   
+$EndComp
+$Comp
+L C C?
+U 1 1 569E5088
+P 850 1500
+F 0 "C?" H 875 1600 50  0000 L CNN
+F 1 "4.7n" H 875 1400 50  0000 L CNN
+F 2 "" H 888 1350 50  0000 C CNN
+F 3 "" H 850 1500 50  0000 C CNN
+	1    850  1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 569E50C5
+P 1150 1500
+F 0 "R?" V 1230 1500 50  0000 C CNN
+F 1 "1Meg" V 1150 1500 50  0000 C CNN
+F 2 "" V 1080 1500 50  0000 C CNN
+F 3 "" H 1150 1500 50  0000 C CNN
+	1    1150 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 569E50EF
+P 850 1650
+F 0 "#PWR?" H 850 1400 50  0001 C CNN
+F 1 "GND" H 850 1500 50  0000 C CNN
+F 2 "" H 850 1650 50  0000 C CNN
+F 3 "" H 850 1650 50  0000 C CNN
+	1    850  1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	850  1650 1150 1650
+Wire Wire Line
+	850  1350 1150 1350
+NoConn ~ 1250 1050
+$Comp
+L GND #PWR?
+U 1 1 569E5153
+P 1450 1300
+F 0 "#PWR?" H 1450 1050 50  0001 C CNN
+F 1 "GND" H 1450 1150 50  0000 C CNN
+F 2 "" H 1450 1300 50  0000 C CNN
+F 3 "" H 1450 1300 50  0000 C CNN
+	1    1450 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 1150 1450 1150
+Wire Wire Line
+	1450 1150 1450 1300
+$Comp
+L IP4234CZ6 U?
+U 1 1 569E5180
+P 2400 1050
+F 0 "U?" H 2500 1200 50  0000 C CNN
+F 1 "IP4234CZ6" H 2650 1100 50  0000 C CNN
+F 2 "" H 2400 1050 60  0000 C CNN
+F 3 "" H 2400 1050 60  0000 C CNN
+	1    2400 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 850  2000 850 
+Wire Wire Line
+	1250 950  1850 950 
+Wire Wire Line
+	1850 950  1850 1150
+Wire Wire Line
+	1850 1150 2000 1150
+Text Label 1400 850  0    60   ~ 0
+ESD_USB_D-
+Text Label 1400 950  0    60   ~ 0
+ESD_USB_D+
+Text Label 1350 750  0    60   ~ 0
+USB_VBUS
+Wire Wire Line
+	1350 750  1250 750 
+Text Label 2650 550  0    60   ~ 0
+USB_VBUS
+$Comp
+L GND #PWR?
+U 1 1 569E52A8
+P 2650 1450
+F 0 "#PWR?" H 2650 1200 50  0001 C CNN
+F 1 "GND" H 2650 1300 50  0000 C CNN
+F 2 "" H 2650 1450 50  0000 C CNN
+F 3 "" H 2650 1450 50  0000 C CNN
+	1    2650 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Q_PMOS_DGS_SC70 Q?
+U 1 1 569E5368
+P 1800 2400
+F 0 "Q?" H 2100 2450 50  0000 R CNN
+F 1 "FDG332PZ" H 2450 2350 50  0000 R CNN
+F 2 "" H 2000 2500 29  0000 C CNN
+F 3 "" H 1800 2400 60  0000 C CNN
+	1    1800 2400
+	0    1    -1   0   
+$EndComp
+Text Label 1050 2300 2    60   ~ 0
+USB_VBUS
+$Comp
+L C C?
+U 1 1 569E555B
+P 1400 2450
+F 0 "C?" H 1425 2550 50  0000 L CNN
+F 1 "4.7u" H 1425 2350 50  0000 L CNN
+F 2 "" H 1438 2300 50  0000 C CNN
+F 3 "" H 1400 2450 50  0000 C CNN
+	1    1400 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 569E55C6
+P 1150 2450
+F 0 "R?" V 1230 2450 50  0000 C CNN
+F 1 "1k" V 1150 2450 50  0000 C CNN
+F 2 "" V 1080 2450 50  0000 C CNN
+F 3 "" H 1150 2450 50  0000 C CNN
+	1    1150 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 569E55FF
+P 1800 2950
+F 0 "R?" V 1880 2950 50  0000 C CNN
+F 1 "1k" V 1800 2950 50  0000 C CNN
+F 2 "" V 1730 2950 50  0000 C CNN
+F 3 "" H 1800 2950 50  0000 C CNN
+	1    1800 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 569E5626
+P 2050 2700
+F 0 "R?" V 2130 2700 50  0000 C CNN
+F 1 "10k" V 2050 2700 50  0000 C CNN
+F 2 "" V 1980 2700 50  0000 C CNN
+F 3 "" H 2050 2700 50  0000 C CNN
+	1    2050 2700
+	0    1    1    0   
+$EndComp
+$Comp
+L C C?
+U 1 1 569E5667
+P 2300 2450
+F 0 "C?" H 2325 2550 50  0000 L CNN
+F 1 "1u" H 2325 2350 50  0000 L CNN
+F 2 "" H 2338 2300 50  0000 C CNN
+F 3 "" H 2300 2450 50  0000 C CNN
+	1    2300 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Q_NMOS_GSD Q?
+U 1 1 569E5717
+P 1700 3350
+F 0 "Q?" H 2000 3400 50  0000 R CNN
+F 1 "BSS138" H 2350 3300 50  0000 R CNN
+F 2 "" H 1900 3450 50  0000 C CNN
+F 3 "" H 1700 3350 50  0000 C CNN
+	1    1700 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 569E57A2
+P 1800 3550
+F 0 "#PWR?" H 1800 3300 50  0001 C CNN
+F 1 "GND" H 1800 3400 50  0000 C CNN
+F 2 "" H 1800 3550 50  0000 C CNN
+F 3 "" H 1800 3550 50  0000 C CNN
+	1    1800 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 3350 1150 3350
+Wire Wire Line
+	1150 3350 1150 2600
+Wire Wire Line
+	1400 2600 1400 2800
+Wire Wire Line
+	1400 2800 1800 2800
+Wire Wire Line
+	1800 2800 1800 2600
+Wire Wire Line
+	1800 2700 1900 2700
+Connection ~ 1800 2700
+Wire Wire Line
+	1800 3100 1800 3150
+Wire Wire Line
+	2200 2700 2300 2700
+Wire Wire Line
+	2300 2700 2300 2600
+Wire Wire Line
+	2000 2300 2500 2300
+Wire Wire Line
+	2000 2000 2000 2300
+Connection ~ 2000 2200
+Connection ~ 2000 2100
+Wire Wire Line
+	1050 2300 1600 2300
+Connection ~ 1150 2300
+Connection ~ 1400 2300
+$Comp
+L +5V #PWR?
+U 1 1 569E5AA3
+P 2500 2150
+F 0 "#PWR?" H 2500 2000 50  0001 C CNN
+F 1 "+5V" H 2500 2290 50  0000 C CNN
+F 2 "" H 2500 2150 50  0000 C CNN
+F 3 "" H 2500 2150 50  0000 C CNN
+	1    2500 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 2300 2500 2150
+Connection ~ 2300 2300
+Text Label 3450 850  0    60   ~ 0
+USB_D-
+Text Label 3450 1150 0    60   ~ 0
+USB_D+
+Wire Wire Line
+	3250 850  3450 850 
+Wire Wire Line
+	3250 1150 3450 1150
+$Sheet
+S 4750 950  1850 1700
+U 569E6C22
+F0 "mcu" 60
+F1 "mcu.sch" 60
+F2 "USB_D-" B L 4750 1050 60 
+F3 "USB_D+" B L 4750 1200 60 
+$EndSheet
+Text Notes 2900 2450 0    60   ~ 0
+unless otherwise specified:\ncapacitor packages \n100n - 0402\n1u - 0402\n2.2u - 0603\n4.7u - 0603\n10u - 0603\n\nresistors:\n1k, 10k, 100k, 3.3k - 0402\nothers - 0603
+$EndSCHEMATC
