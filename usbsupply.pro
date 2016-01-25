@@ -1,4 +1,4 @@
-update=Tue 19 Jan 2016 09:30:11 AM EST
+update=Tue 19 Jan 2016 12:05:04 PM EST
 version=1
 last_client=kicad
 [pcbnew]
@@ -60,3 +60,13 @@ LibName28=contrib
 LibName29=valves
 LibName30=/home/brighty/kicad-projects/bce
 LibName31=/home/brighty/kicad-projects/stm32
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=/home/brighty/Desktop/
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Pcbnew
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
